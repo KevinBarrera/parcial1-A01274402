@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <title>Réplica de ejemplo B - Kevin Barrera Hernández</title>
 
-    <script>
-        function simpleAlert(){
-            let xhr = XMLHttpRequest();
-            xhr.open('GET','https://yvone.github.io/DAW/some-numbers.json');
-        };
+    <script type="text/javascript">
+		const simpleAlert = () => {
+			let xhr = new XMLHttpRequest();
+			let btn = document.getElementById("btn");
+			xhr.open("GET", "https://yvone.github.io/DAW/some-numbers.json");
+			xhr.onload = () => {
+				if(this.readyState === 4 && this.status === 200) {
+					changeText(this);
+				} else {
+					alert("ERROR: " + this.status);
+                    console.log("ERROR: " + this.status);
+				}
+			};
+			xhr.onerror = () => {
+				alert("la conexión ha fallado");
+			}
+			xhr.send();
+		}
     </script>
 
 </head>
@@ -43,7 +56,7 @@
             <div>3.</div>
             <img class="lenguas" src="img/imgC.png" alt="">
         </div>
-        <button onclick="simpleAlert()"><img class="logos" src="img/scan_gray_icon.png" alt=""> Begin</button>
+        <button onclick="simpleAlert()" id="btn"><img class="logos" src="img/scan_gray_icon.png" alt=""> Begin</button>
     </div>
 </body>
 </html>
