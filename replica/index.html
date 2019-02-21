@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Réplica de ejemplo B - Kevin Barrera Hernández</title>
+
+    <script>
+        function simpleAlert(){
+            let xhr = XMLHttpRequest();
+            xhr.open('GET','https://yvone.github.io/DAW/some-numbers.json');
+        };
+    </script>
+
+</head>
+<body>
+    <div class="contenedor">
+        <div id="barra">
+            <div>9:41</div>
+            <div>icons</div>
+        </div>
+        <div id="logo">
+            <img class="logos" src="img/logo_icon.png" alt="">
+        </div>
+        <div id="titulo">
+            <h2>Scan Tongue</h2>
+            <img class="logos" src="img/help_icon.png" alt="">
+        </div>
+        <div id="texto">
+            <p>Put your tongue under the scanner so that it is tpuching Press until purple light stops.</p>
+        </div>
+        <div id="pasos">
+            <div>1.</div>
+            <img class="lenguas" src="img/imgA.png" alt="">
+        </div>
+        <div id="pasos">
+            <div>2.</div>
+            <img class="lenguas" src="img/imgB.png" alt="">
+        </div>
+        <div id="pasos">
+            <div>3.</div>
+            <img class="lenguas" src="img/imgC.png" alt="">
+        </div>
+        <button onclick="simpleAlert()"><img class="logos" src="img/scan_gray_icon.png" alt=""> Begin</button>
+    </div>
+</body>
+</html>
