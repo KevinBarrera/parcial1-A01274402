@@ -14,7 +14,7 @@
 			xhr.open("GET", "https://yvone.github.io/DAW/some-numbers.json");
 			xhr.onload = () => {
 				if(this.readyState === 4 && this.status === 200) {
-					changeText(this);
+                    
 				} else {
 					alert("ERROR: " + this.status);
                     console.log("ERROR: " + this.status);
